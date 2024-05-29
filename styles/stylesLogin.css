@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url('/assets/fondoRegistro.jpg');
+}
+
+label{
+    color: white;
+}
+
+h1{
+    color: white;
+}
+
+.fondoLogin {
+    width: 100%;
+    height: 100vh; /* 100% de la altura de la ventana */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Centrar verticalmente */ /* Centrar horizontalmente */
+}
+
+.form{
+    background-color: black;
+    padding: 50px;
+    border-radius: 10px;
+}
+
