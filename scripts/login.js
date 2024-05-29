@@ -1,14 +1,25 @@
-document.getElementById("loginForm").addEventListener("submit", function(event) {
-    event.preventDefault(); // Evitar que el formulario se envíe por defecto
+// script.js
+document.getElementById('loginForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Evita que se envíe el formulario
 
-    // Obtener valores de los campos de entrada
-    var email = document.getElementById("inputEmail").value;
-    var password = document.getElementById("inputPassword").value;
+    // Aquí deberías agregar la lógica para verificar las credenciales del usuario.
+    // Si las credenciales son correctas, muestra la página de inicio y oculta la página de inicio de sesión.
+    var username = document.getElementById('inputEmail').value;
+    var password = document.getElementById('inputPassword').value;
 
-    // Validar los campos (aquí puedes agregar tu lógica de validación)
-    if (email.trim() === "" || password.trim() === "") {
-        alert("Por favor, completa todos los campos.");
-        return;
+    // Supongamos que aquí tienes una función llamada 'authenticateUser' que verifica las credenciales.
+    if (authenticateUser(username, password)) {
+        window.location.href = 'index.html';
+    } else {
+        alert('Usuario o contraseña incorrectos');
     }
-    window.location.href = "index.html";
 });
+
+function authenticateUser(username, password) {
+    // Aquí deberías implementar la lógica para verificar las credenciales del usuario.
+    // Puedes usar localStorage, sessionStorage, cookies o comunicarte con un backend para autenticar al usuario.
+    // Por simplicidad, en este ejemplo, solo comparamos el nombre de usuario 'admin' y la contraseña 'admin'.
+    return (username === 'admin@admin.com' && password === 'admin');
+}
+
+
